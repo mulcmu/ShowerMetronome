@@ -7,5 +7,5 @@
 #       or equal to the generated config header
 #
 linker.cmd: package/cfg/main_pe430.xdl
-	$(SED) 's"^\"\(package/cfg/main_pe430cfg.cmd\)\"$""\"C:/Users/Ryan/CSS_workspace_v6_0/ShowerMetronone/Debug/configPkg/\1\""' package/cfg/main_pe430.xdl > $@
+	$(SED) 's"^\"\(package/cfg/main_pe430cfg.cmd\)\"$""\"C:/Users/Ryan/CSS_workspace_v6_0/SM/Debug/configPkg/\1\""' package/cfg/main_pe430.xdl > $@
 	-$(SETDATE) -r:max package/cfg/main_pe430.h compiler.opt compiler.opt.defs

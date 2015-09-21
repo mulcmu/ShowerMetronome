@@ -50,7 +50,7 @@
  *  Define absolute path prefix for this executable's
  *  configuration generated files.
  */
-xdc__META(__ASM__, "@(#)__ASM__ = C:/Users/Ryan/CSS_workspace_v6_0/ShowerMetronone/Debug/configPkg/package/cfg/main_pe430");
+xdc__META(__ASM__, "@(#)__ASM__ = C:/Users/Ryan/CSS_workspace_v6_0/SM/Debug/configPkg/package/cfg/main_pe430");
 
 /*
  *  ======== __ISA__ ========
@@ -116,6 +116,18 @@ Void ti_catalog_msp430_init_Boot_init(Void)
  */
 
 /* CSL stuff */
+
+/*
+ * ======== ti.mcu.msp430.csl.timer.Timer0_A3 TEMPLATE ========
+ */
+
+/* Timer_A stuff from C:/ti/grace_3_00_02_64/packages/ti/mcu/msp430/csl/timer/./ITimer_A.xdt */
+
+/*
+ * ======== ti.mcu.msp430.csl.timer.Timer1_A3 TEMPLATE ========
+ */
+
+/* Timer_A stuff from C:/ti/grace_3_00_02_64/packages/ti/mcu/msp430/csl/timer/./ITimer_A.xdt */
 
 /*
  * ======== ti.mcu.msp430.csl.clock.BCSplus TEMPLATE ========

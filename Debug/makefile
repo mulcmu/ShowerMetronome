@@ -9,7 +9,7 @@ CG_TOOL_ROOT := c:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.2
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
 "./main.obj" \
-"../lnk_msp430g2211.cmd" \
+"../lnk_msp430g2553.cmd" \
 -l"libc.a" \
 
 -include ../makefile.init
@@ -108,32 +108,32 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-ShowerMetronone.out \
+SM.out \
 
 EXE_OUTPUTS__QUOTED += \
-"ShowerMetronone.out" \
+"SM.out" \
 
 BIN_OUTPUTS += \
-ShowerMetronone.hex \
+SM.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"ShowerMetronone.hex" \
+"SM.hex" \
 
 
 # All Target
-all: ShowerMetronone.out
+all: SM.out
 
 # Tool invocations
-ShowerMetronone.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+SM.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MSP430 Linker'
-	"c:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.2/bin/cl430" -vmsp --abi=eabi --use_hw_mpy=none --advice:power=all -g --define=__MSP430G2211__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"ShowerMetronone.map" --heap_size=0 --stack_size=50 -i"c:/ti/ccsv6/ccs_base/msp430/include" -i"c:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.2/lib" -i"c:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.2/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="ShowerMetronone_linkInfo.xml" --rom_model -o "ShowerMetronone.out" $(ORDERED_OBJS)
+	"c:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.2/bin/cl430" -vmsp --abi=eabi --use_hw_mpy=none --advice:power=all -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"SM.map" --heap_size=80 --stack_size=80 -i"c:/ti/ccsv6/ccs_base/msp430/include" -i"c:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.2/lib" -i"c:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.2/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="SM_linkInfo.xml" --rom_model -o "SM.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-ShowerMetronone.hex: $(EXE_OUTPUTS)
+SM.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: MSP430 Hex Utility'
-	"c:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.2/bin/hex430" --memwidth=8 --romwidth=8 -o "ShowerMetronone.hex" $(EXE_OUTPUTS__QUOTED)
+	"c:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.2/bin/hex430" --memwidth=8 --romwidth=8 -o "SM.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 

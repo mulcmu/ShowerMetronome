@@ -4,7 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CMD_SRCS += \
-../lnk_msp430g2211.cmd 
+../lnk_msp430g2553.cmd 
 
 CFG_SRCS += \
 ../main.cfg 

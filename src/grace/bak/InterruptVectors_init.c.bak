@@ -58,10 +58,12 @@ __interrupt void TIMER1_A0_ISR_HOOK(void)
 	//TA0CTL |= MC_1;
 	//BitSet(TA0CTL, MC_1);
 
+	//Stop Timer1
+	BitClear(TA1CTL, MC1 + MC0);
+
 	//Debug Value
 	Timer1_A0++;
 
-	//Wakeup
 	__bic_SR_register_on_exit(LPM4_bits);
 
     /* USER CODE END (section: TIMER1_A0_ISR_HOOK) */
